@@ -10,3 +10,6 @@
 .bg-font{
     color: var(--font-color) !important;
 }
+.bg-page_container{
+    color: var(--main-color)!important;
+}
