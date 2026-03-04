@@ -1,0 +1,12 @@
+:root{
+    --main-color: #F2F6F3;
+    --nav-color: #1F3D2B;
+    --font-color:#EDEBE6;
+
+}
+.bg-nav{
+    background-color: var(--nav-color) !important;
+}
+.bg-font{
+    color: var(--font-color) !important;
+}
