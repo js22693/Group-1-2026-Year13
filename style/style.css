@@ -13,3 +13,17 @@
 .bg-page_container{
     color: var(--main-color)!important;
 }
+
+
+
+
+
+ footer{
+    background-color: rgb(58, 58, 58);
+
+ }
+
+ .text{
+    text-align: center;
+    padding-bottom: 15px;
+ }
