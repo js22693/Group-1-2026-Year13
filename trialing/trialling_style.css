@@ -1,0 +1,64 @@
+
+
+@media (max-width: 600px) { 
+#green_path{
+    display: none;
+}
+} 
+/* Small devices (portrait tablets and large phones, 600px and up) */ 
+@media (min-width: 600px) { 
+#green_path{
+    display: none;
+}
+
+} 
+/* Medium devices (landscape tablets, 768px and up) */ 
+@media (min-width: 768px) { 
+#green_path{
+    display: none;
+}
+} 
+/* Large devices (laptops/desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) {
+#active{
+    text-decoration: overline;
+    text-underline-offset: 30px;
+    text-decoration-thickness: 5px;
+}
+#green_path{
+    display: inline;
+}
+#green_path_brand{
+    display: none;
+}
+ 
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */ 
+@media only screen and (min-width: 1200px) {
+
+
+}
+:root{
+    --main-color: #F2F6F3;
+    --nav-color: #1F3D2B;
+    --font-color:#EDEBE6;
+
+}
+.bg-nav{
+    background-color: var(--nav-color) !important;
+}
+.bg-font{
+    color: var(--font-color) !important;
+}
+.bg-page_container{
+    color: var(--main-color)!important;
+}
+.navbar-toggler{
+    border-color: var(--font-color);
+}
+.navbar-toggler:focus{
+    box-shadow: var(--font-color);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
