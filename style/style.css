@@ -19,11 +19,18 @@
 
 
  footer{
-    background-color: #2A2F2C;
-
+    background-color: #242524;
  }
+
+
+
+
+
 
  .text{
     text-align: center;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(17, 16, 16);
  }
