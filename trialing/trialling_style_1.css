@@ -21,9 +21,9 @@
 /* Large devices (laptops/desktops, 992px and up) */ 
 @media only screen and (min-width: 992px) {
 #active{
-    text-decoration: overline;
-    text-underline-offset: 30px;
-    text-decoration-thickness: 5px;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 8px;
 }
 #green_path{
     display: inline;
