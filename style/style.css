@@ -22,3 +22,28 @@
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+
+
+.footer-section {
+    background-color: #0f0f0f; 
+    color: #cccccc; 
+    padding-top: 50px; 
+    padding-bottom: 30px; 
+} 
+.footer-section hr { 
+    border-color: #ffffff; 
+} 
+.footer-box { 
+    margin-bottom: 30px; 
+} 
+.footer-box h6 { 
+    color: white; 
+    margin-bottom: 15px; 
+} 
+.footer-box p { 
+    font-size: 14px; 
+} 
+.footer-bottom { 
+    margin-top: 20px; 
+}
