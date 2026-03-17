@@ -4,40 +4,26 @@
 #green_path{
     display: none;
 }
-#green_path_brand{
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 4px;
-}
 } 
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
 @media (min-width: 600px) { 
 #green_path{
     display: none;
 }
-#green_path_brand{
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 4px;
-}
+
 } 
 /* Medium devices (landscape tablets, 768px and up) */ 
 @media (min-width: 768px) { 
 #green_path{
     display: none;
 }
-#green_path_brand{
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 4px;
-}
 } 
 /* Large devices (laptops/desktops, 992px and up) */ 
 @media only screen and (min-width: 992px) {
 #active{
-    border: 4px solid var(--font-color);
-    padding: 16px;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 8px;
 }
 #green_path{
     display: inline;
@@ -45,6 +31,7 @@
 #green_path_brand{
     display: none;
 }
+ 
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */ 
 @media only screen and (min-width: 1200px) {
