@@ -51,5 +51,74 @@
 .map{
     margin-top: 50px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.search-bar {
+    width: 40%;
+    background: #ccc;
+    padding: 10px;
+    align-items: center;
+    display: block;
+    margin: 0 auto 10px auto;
+    margin-top: 10px;
+}
+
+.left-panel {
+    overflow-y: auto;
+    align-items: center;
+}
+
+.review-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.review-list li {
+    margin-bottom: 15px;
+}
+
+.review-card {
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/* place 설명에 별점을 매기는 요소들 ex: view, 고도 길이 소요시간 opening time이 있는지 카오리 나무*/
+
+
+.bottom_sheet {
+   display: flex;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 10%;
+   border-top-left-radius: 30px;
+   border-top-right-radius: 30px;
+   background-color: #FFFFFF;
+   overflow-y: auto;
+   flex-direction: column;
+   align-items: center;
+   transition-duration: 1s;
+}
+
+
+.bottom_sheet {
+   display: flex;
+   position: sticky;
+   bottom: 0;
+   width: 100%;
+   height: 550px; 
+   background-color: #FFFFFF;
+   border-top-left-radius: 30px;
+   border-top-right-radius: 30px;
+   box-shadow: 0 -5px 10px rgba(0,0,0,0.05);
+   flex-direction: column;
+   align-items: center;
+   transition: height 0.5s ease;
+   z-index: 100;
+   margin-top: 50px;
+}
