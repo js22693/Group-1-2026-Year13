@@ -24,7 +24,9 @@
 }
 
 .trans_cust{
-    transform: translate(-10%, -30%) !important
+    top: 10%;
+    left: 10%;
+    transform: translate(0,0) !important;
 }
 .footer-section {
     background-color: #2A2F2C; 
