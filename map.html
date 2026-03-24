@@ -35,131 +35,120 @@
 
 <div class="container-fluid">
     <div class="row">
+        <div class="col-lg-6 col-12 map order-1 order-lg-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85825.27228823668!2d174.7618478148234!3d-36.92619921232924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x500ef6143a29917!2sAuckland!5e0!3m2!1sen!2snz!4v1773884042835!5m2!1sen!2snz" width="700" height="650" style="border:10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
-    <div class="col-lg-6 col-12 map order-1 order-lg-2">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85825.27228823668!2d174.7618478148234!3d-36.92619921232924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x500ef6143a29917!2sAuckland!5e0!3m2!1sen!2snz!4v1773884042835!5m2!1sen!2snz" width="700" height="550" style="border:10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
         <div class="col-lg-6 col-12 order-2 order-lg-1">
-                <div id="bottomSheet" class="bottom_sheet">
+            <div class="left-panel">
 
-                    <div style="margin-bottom: 40px;"></div>
-                    <div class="bottom_box">
-                        <div class="left-panel">
-                            <input type="text" placeholder="search bar" class="search-bar">
-                            <ul class="list-unstyled review-list">
+                <div class="search-bar-pc">
+                    <input type="text" placeholder="search bar" class="search-bar search-bar-pc">
+                </div>
+            
+                <div class="bottom-sheet">
+                    <div class="content">
+                        <button id="toggleBtn">Expand</button>
+                                <input type="text" placeholder="search bar" class="search-bar search-bar-mobile">
+                                <ul class="list-unstyled review-list">
 
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">First Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
-                                    </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Second Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Cornwall Park</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Relaxing park with wide open spaces and easy tracks.</p>
-                                    </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-        
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-        
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="card review-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Third Place</h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary">Mount Eden</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                        <p class="card-text">Short but rewarding walk with a great city view.</p>
-                                    </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card review-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">First Place</h5>
+                                            <h6 class="card-subtitle mb-2 text-body-secondary">Auckland Domain</h6>
+                                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                            <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        </div>
+                                        </div>
+                                    </li>
+                            
+                                </ul>
+                        
+                            </div>
                     </div>
                 </div>
-            </div>
 
         </div>
     
-
-
 </div>
 
+<script>
+    const btn = document.getElementById("toggleBtn");
+    const sheet = document.querySelector(".bottom-sheet");
 
+    let expanded = false;
+
+    btn.addEventListener("click", () => {
+        if (window.innerWidth >= 992) return;
+        if (expanded) {
+            sheet.style.height = "250px";
+        } else {
+            sheet.style.height = "1000px";
+        }
+        expanded = !expanded;
+    });
+</script>
 
 
 <footer class="footer-section">

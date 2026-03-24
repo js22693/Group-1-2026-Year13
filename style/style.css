@@ -25,6 +25,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer-section {
     background-color: #2A2F2C; 
     color: #cccccc; 
@@ -56,20 +71,43 @@
     align-items: center;
 }
 
+
+
+
+
 .search-bar {
     width: 40%;
     background: #ccc;
     padding: 10px;
     align-items: center;
     display: block;
-    margin: 0 auto 10px auto;
+
+}
+
+.search-bar-mobile{
+    margin: 0 auto 30px auto;
     margin-top: 10px;
 }
+
+.search-bar-pc{
+    margin: 0 auto 10px auto;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
 
 .left-panel {
     overflow-y: auto;
     align-items: center;
 }
+
+
+
 
 .review-list {
     padding: 0;
@@ -79,6 +117,7 @@
 
 .review-list li {
     margin-bottom: 15px;
+    padding: 10px;
 }
 
 .review-card {
@@ -87,38 +126,55 @@
 }
 
 
-/* place 설명에 별점을 매기는 요소들 ex: view, 고도 길이 소요시간 opening time이 있는지 카오리 나무*/
-
-
-.bottom_sheet {
-   display: flex;
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   height: 10%;
-   border-top-left-radius: 30px;
-   border-top-right-radius: 30px;
-   background-color: #FFFFFF;
-   overflow-y: auto;
-   flex-direction: column;
-   align-items: center;
-   transition-duration: 1s;
+.map{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.bottom_sheet {
-   display: flex;
-   position: sticky;
-   bottom: 0;
-   width: 100%;
-   height: 550px; 
-   background-color: #FFFFFF;
-   border-top-left-radius: 30px;
-   border-top-right-radius: 30px;
-   box-shadow: 0 -5px 10px rgba(0,0,0,0.05);
-   flex-direction: column;
-   align-items: center;
-   transition: height 0.5s ease;
-   z-index: 100;
-   margin-top: 50px;
+
+
+
+
+.bottom-sheet {
+    background: #eee;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    height: 300px;
+
+    transition: height 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+
+
+
+.bottom-sheet {
+    transform: translateY(0);
+}
+
+.bottom-sheet.closed {
+    transform: translateY(80%);
+}
+
+.content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+
+
+.search-bar-pc {
+    display: none;
+}
+
+.search-bar-mobile {
+    display: block;
 }
