@@ -1,0 +1,100 @@
+
+
+@media (max-width: 600px) { 
+#green_path{
+    display: none;
+}
+} 
+/* Small devices (portrait tablets and large phones, 600px and up) */ 
+@media (min-width: 600px) { 
+#green_path{
+    display: none;
+}
+
+} 
+/* Medium devices (landscape tablets, 768px and up) */ 
+@media (min-width: 768px) { 
+#green_path{
+    display: none;
+}
+} 
+/* Large devices (laptops/desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) {
+#active{
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-thickness: 6px;
+}
+#green_path{
+    display: inline;
+}
+#green_path_brand{
+    display: none;
+}
+ 
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */ 
+@media only screen and (min-width: 1200px) {
+
+
+}
+
+
+
+
+
+
+/*map page*/
+@media screen and (max-width: 992px){
+    .map iframe{
+     margin: auto;
+     width: 450px;
+     height:400px;
+    }
+}
+
+
+
+
+/*left-panal*/
+@media screen and (min-width: 992px) {
+    .bottom-sheet {
+        height: 700px !important;
+    }
+    .left-panal{
+        margin-top: 300px;
+    }
+
+    #toggleBtn {
+        display: none;
+    }
+    .search-bar-pc {
+        display: block !important;
+        margin-top: 100px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .search-bar-mobile {
+        display: none !important;
+    }
+    .bottom-sheet {
+        background-color: rgba(255, 255, 255, 0)!important;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .bottom-sheet {
+        height: 1100px !important;
+    }
+
+    .search-bar-pc {
+        margin-top: 100px !important;
+    }
+
+    .map iframe{
+     margin: auto;
+     width: 450px;
+     height:400px;
+    }
+}
