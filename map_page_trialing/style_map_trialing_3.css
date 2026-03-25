@@ -63,6 +63,25 @@
     margin-top: 20px; 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .map{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -98,9 +117,6 @@
 
 
 
-
-
-
 .left-panel {
     overflow-y: auto;
     align-items: center;
@@ -126,25 +142,15 @@
 }
 
 
-.map{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
 
 
 
 .bottom-sheet {
-    background: #eee;
+    background-color: #ffffff00;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 
-    height: 300px;
+    height: 1200px;
 
     transition: height 0.3s ease;
 

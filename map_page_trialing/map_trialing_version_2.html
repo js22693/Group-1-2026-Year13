@@ -7,7 +7,7 @@
     <title>Map page version 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style_map_trialing_1.css">
+    <link rel="stylesheet" href="style_map_trialing_2.css">
 </head>
 <body class="bg-page_container">
   <div class="">
@@ -49,7 +49,6 @@
             
                 <div class="bottom-sheet">
                     <div class="content">
-                        <button id="toggleBtn">Expand</button>
                                 <input type="text" placeholder="search bar" class="search-bar search-bar-mobile">
                                 <ul class="list-unstyled review-list">
 
@@ -134,22 +133,7 @@
     
 </div>
 
-<script>
-    const btn = document.getElementById("toggleBtn");
-    const sheet = document.querySelector(".bottom-sheet");
 
-    let expanded = false;
-
-    btn.addEventListener("click", () => {
-        if (window.innerWidth >= 992) return;
-        if (expanded) {
-            sheet.style.height = "250px";
-        } else {
-            sheet.style.height = "1000px";
-        }
-        expanded = !expanded;
-    });
-</script>
 
 
 <footer class="footer-section">
