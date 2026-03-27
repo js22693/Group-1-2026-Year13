@@ -45,39 +45,56 @@
 
 
 /*map page*/
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 992px){
     .map iframe{
      margin: auto;
      width: 450px;
      height:400px;
     }
-
 }
 
 
 
-@media (min-width: 992px) {
+
+/*left-panal*/
+@media screen and (min-width: 992px) {
     .bottom-sheet {
         height: 700px !important;
-        margin-top: 30px;
+        background-color: rgba(255, 255, 255, 0)!important;
+
+    }
+    .left-panal{
+        margin-top: 300px;
     }
 
     #toggleBtn {
         display: none;
     }
-}
-
-
-
-@media (min-width: 992px) {
     .search-bar-pc {
         display: block !important;
+        margin-top: 100px !important;
+        margin-bottom: 30px !important;
     }
 
     .search-bar-mobile {
         display: none !important;
     }
+
+}
+
+
+@media screen and (min-width: 1400px) {
     .bottom-sheet {
-        background-color: rgba(255, 255, 255, 0)!important;
+        height: 1100px !important;
+    }
+
+    .search-bar-pc {
+        margin-top: 100px !important;
+    }
+
+    .map iframe{
+     margin: auto;
+     width: 1000px;
+     height:1000px;
     }
 }

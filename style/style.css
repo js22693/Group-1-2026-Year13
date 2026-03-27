@@ -63,6 +63,25 @@
     margin-top: 20px; 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .map{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -98,9 +117,6 @@
 
 
 
-
-
-
 .left-panel {
     overflow-y: auto;
     align-items: center;
@@ -124,16 +140,6 @@
     width: 75%;
     margin: 0 auto;
 }
-
-
-.map{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 
 
