@@ -184,3 +184,20 @@
 .search-bar-mobile {
     display: block;
 }
+
+
+.btn-success {
+    background-color: #1F3D2B;
+    border-color: #34473c;
+}
+
+.btn-success:hover {
+    background-color: #275238;
+    border-color: #163021;
+}
+
+
+.card{
+    border: none !important;
+
+}
