@@ -35,9 +35,23 @@
 
 <div class="container-fluid">
     <div class="row">
+
         <div class="col-lg-6 col-12 map order-1 order-lg-2">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d408771.6295495424!2d174.3969259878829!3d-36.82982035351429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAuckland%20bush%20walk!5e0!3m2!1sen!2skr!4v1774691304020!5m2!1sen!2skr" width="700" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="right-panel">
+                <div class="map-container">
+                    <img src="resources/image.png" class="map-img">
+                    <div class="pin" data-target="card1" style="top: 40%; left: 60%;">
+                        <img src="resources/pin.png" alt="pin" class="pin-shape">
+                    </div>
+                    <div class="pin" data-target="card3" style="top: 70%; left: 30%;">
+                        <img src="resources/pin.png" alt="pin" class="pin-shape">
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+
 
         <div class="col-lg-6 col-12 order-2 order-lg-1">
             <div class="left-panel">
@@ -48,141 +62,143 @@
             
                 <div class="bottom-sheet">
                     <div class="content">
-                        <button id="toggleBtn">Expand</button>
-                                <input type="text" placeholder="search bar" class="search-bar search-bar-mobile">
-                                <ul class="list-unstyled review-list">
+                        <div class="expand-button">
+                            <button id="toggleBtn"><img src="resources/expand.png" id="expandIcon" alt="expand" class="expand"></button>
+                        </div>
+                        <input type="text" placeholder="search bar..." class="search-bar search-bar-mobile">
+                        <ul class="list-unstyled review-list">
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card1">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">1 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more1">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more1">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more1">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more1">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
 
 
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card2">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">2 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more2">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more2">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more2">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more2">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
 
 
 
 
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card3">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">7 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more3">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more3">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more3">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more3">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
 
 
 
 
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card4">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">3 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more4">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more4">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more4">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more4">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
 
 
 
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card5">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">4 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more5">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more5">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more5">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more5">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
 
 
@@ -190,68 +206,71 @@
 
 
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card6">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">5 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more6">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more6">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more6">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more6">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
 
 
 
-                                    <li>
-                                        <div class="card review-card">
-                                            <div class="card-body">
-                                                <h5 class="card-title review-title">First Place</h5>
-                                                <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                                <p class="card-text">⭐⭐⭐⭐⭐</p>
-                                                <p class="card-text">Beautiful walking track with great views and nature.</p>
+                            <li id="card7">
+                                <div class="card review-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title review-title">6 Place</h5>
+                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
+                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
 
-                                                <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more7">
-                                                    More Info
-                                                </button>
-                                                
-                                                <div class="collapse" id="more7">
-                                                    <div class="card card-body">
-                                                        Length: 3km<br>
-                                                        Difficulty: Easy<br>
-                                                        Time: 45 mins
-                                                    </div>
-                                                </div>
+                                        <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more7">
+                                            More Info
+                                        </button>
+                                        
+                                        <div class="collapse" id="more7">
+                                            <div class="card card-body">
+                                                Length: 3km<br>
+                                                Difficulty: Easy<br>
+                                                Time: 45 mins
                                             </div>
-                                        </div>                                    
-                                    </li>
-                            
-                                </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         
-                            </div>
+                        </ul>
+                        
+                    
                     </div>
                 </div>
-
+            </div>
         </div>
-    
+    </div>
 </div>
 
 <script>
+    /* Script for the expand button in mobile version */
     const btn = document.getElementById("toggleBtn");
     const sheet = document.querySelector(".bottom-sheet");
+    const icon = document.getElementById("expandIcon");
+
 
     let expanded = false;
 
@@ -259,8 +278,12 @@
         if (window.innerWidth >= 992) return;
         if (expanded) {
             sheet.style.height = "250px";
+            icon.src = "resources/expand.png";
+
         } else {
             sheet.style.height = "1000px";
+            icon.src = "resources/unexpand.png";
+
         }
         expanded = !expanded;
     });
@@ -270,48 +293,44 @@
 
 
 
-const inputs = document.querySelectorAll(".search-bar");
-const list = document.querySelector(".review-list");
-const items = Array.from(list.querySelectorAll("li"));
+    /* Script to enable search bar functionality */
+    const inputs = document.querySelectorAll(".search-bar");
+    const list = document.querySelector(".review-list");
+    const items = Array.from(list.querySelectorAll("li"));
 
-// 원래 순서 저장
-const originalOrder = [...items];
+    /* Store original order */
+    const originalOrder = [...items];
 
-inputs.forEach(input => {
+    inputs.forEach(input => {
 
-    input.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            const keyword = input.value.toLowerCase();
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                const keyword = input.value.toLowerCase();
 
-            const sorted = [...items].sort((a, b) => {
-                const aTitle = a.querySelector(".review-title").textContent.toLowerCase();
-                const bTitle = b.querySelector(".review-title").textContent.toLowerCase();
+                const sorted = [...items].sort((a, b) => {
+                    const aTitle = a.querySelector(".review-title").textContent.toLowerCase();
+                    const bTitle = b.querySelector(".review-title").textContent.toLowerCase();
 
-                function getScore(title) {
-                    if (title === keyword) return 3;         
-                    if (title.startsWith(keyword)) return 2;  
-                    if (title.includes(keyword)) return 1;    
-                    return 0;
-                }
+                    function getScore(title) {
+                        if (title === keyword) return 3;         
+                        if (title.startsWith(keyword)) return 2;  
+                        if (title.includes(keyword)) return 1;    
+                        return 0;
+                    }
 
-                return getScore(bTitle) - getScore(aTitle);
-            });
+                    return getScore(bTitle) - getScore(aTitle);
+                });
 
-            sorted.forEach(item => list.appendChild(item));
-        }
+                sorted.forEach(item => list.appendChild(item));
+            }
+        });
+
+        input.addEventListener("input", () => {
+            if (input.value === "") {
+                originalOrder.forEach(item => list.appendChild(item));
+            }
+        });
     });
-
-    input.addEventListener("input", () => {
-        if (input.value === "") {
-            originalOrder.forEach(item => list.appendChild(item));
-        }
-    });
-
-});
-
-
-
-
 
 
 
@@ -322,6 +341,39 @@ inputs.forEach(input => {
             info.classList.toggle("show");
         });
     });
+
+
+    /* Script to move the corresponding card to the top when a pin is clicked */
+    const pins = document.querySelectorAll(".pin");
+    const reviewList = document.querySelector(".review-list");
+
+    pins.forEach(pin => {
+        pin.addEventListener("click", () => {
+
+            const targetId = pin.dataset.target;
+            const item = document.getElementById(targetId);
+
+            if (!item) return;
+
+            /* Move to the top */
+            reviewList.prepend(item);
+
+            /* Visual effect, slightly enlarge then return to normal */
+            document.querySelectorAll("li").forEach(li => {
+                li.style.order = "";
+            });
+
+            item.style.transform = "scale(1.02)";
+            item.style.transition = "0.3s";
+
+            setTimeout(() => {
+                item.style.transform = "scale(1)";
+            }, 300);
+
+        });
+    });
+    
+
 </script>
 
 
