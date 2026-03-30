@@ -59,7 +59,11 @@
     text-decoration-thickness: 2px;
 }
 
-
+#card_img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
 
 @media (max-width: 600px) { 
 #green_path{
