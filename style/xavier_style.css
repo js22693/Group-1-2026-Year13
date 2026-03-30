@@ -1,0 +1,136 @@
+:root{
+    --main-color: #F2F6F3;
+    --nav-color: #1F3D2B;
+    --font-color:#EDEBE6;
+
+}
+.bg-nav{
+    background-color: var(--nav-color) !important;
+}
+.bg-font{
+    color: var(--font-color) !important;
+}
+.bg-page_container{
+    background-color: var(--main-color)!important;
+}
+.navbar-toggler{
+    border-color: var(--font-color);
+}
+.navbar-toggler:focus{
+    box-shadow: var(--font-color);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.footer-section {
+    background-color: #2A2F2C; 
+    color: #cccccc; 
+    padding-top: 50px; 
+    padding-bottom: 30px; 
+} 
+.footer-section hr { 
+    border-color: #ffffff; 
+} 
+.footer-box { 
+    margin-bottom: 30px; 
+} 
+.footer-box h6 { 
+    color: white; 
+    margin-bottom: 15px; 
+} 
+.footer-box p { 
+    font-size: 14px; 
+} 
+.footer-bottom { 
+    margin-top: 20px; 
+}
+#banner_h1{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 6px;
+    font-size: 55px;
+}
+
+#cards h5{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+#card_img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+@media (max-width: 600px) { 
+#green_path{
+    display: none;
+}
+.trans_cust{
+    top: 20%;
+    left: 10%;
+    transform: translate(0,0) !important;
+}
+} 
+/* Small devices (portrait tablets and large phones, 600px and up) */ 
+@media (min-width: 600px) { 
+#green_path{
+    display: none;
+}
+.trans_cust{
+    top: 25%;
+    left: 20%;
+    transform: translate(0,0) !important;
+}
+
+} 
+/* Medium devices (landscape tablets, 768px and up) */ 
+@media (min-width: 768px) { 
+#green_path{
+    display: none;
+}
+.trans_cust{
+    top: 40%;
+    left: 10%;
+    transform: translate(0,0) !important;
+}
+} 
+/* Large devices (laptops/desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) {
+#active{
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-thickness: 6px;
+}
+#green_path{
+    display: inline;
+}
+#green_path_brand{
+    display: none;
+}
+#banner_image{
+    width:100%;
+    max-height:800px;
+    object-fit: cover;
+    opacity: 100%;
+}
+.trans_cust{
+    top: 45%;
+    left: 10%;
+    transform: translate(0,0) !important;
+}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */ 
+@media only screen and (min-width: 1200px) {
+
+
+}
+
+
+
+
+
+
