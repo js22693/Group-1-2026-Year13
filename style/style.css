@@ -178,3 +178,13 @@
 .search-bar-mobile {
     display: block;
 }
+
+.review-search-bar{
+    width: 40%;
+    background: #ccc;
+    padding: 10px;
+    align-items: center;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
