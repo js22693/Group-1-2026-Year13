@@ -194,8 +194,7 @@
     padding: 10px;
     align-items: center;
     display: block;
-    margin: auto;
-    margin-top: 30px;
+    margin: 0;
 }
 
 
@@ -204,4 +203,28 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 15px;
     row-gap: 5px;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 가운데 정렬 */
+    gap: 5px;
+    margin-top: 30px;
+
+}
+
+
+.addreview {
+    border: none;
+    background: none;   /* ⭐ 배경 제거 */
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.plusicon{
+    width: 40px;   /* 크기 조절 */
+    height: 40px;
 }

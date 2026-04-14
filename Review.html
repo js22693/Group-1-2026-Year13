@@ -36,12 +36,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-sm-12">
-            <input type="text" placeholder="search bar..." class="review-search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="search bar..." class="review-search-bar">
+                <button id="addReviewBtn" class="addreview">
+                    <img src="resources/addicon.png" alt="add" class="plusicon">
+                </button>
+            </div>
         </div>
         
-        <button id="addReviewBtn" class="addreview">
-            + Add Review
-        </button>
+        
         <div id="reviewForm" style="display:none; margin-bottom:10px;">
             <input type="text" id="inputTitle" placeholder="Place name" class="form-control mb-2">
             
@@ -60,14 +63,8 @@
 
         <div class="col-lg-6 col-12 map order-1 order-lg-2">
             <div class="right-panel">
-                <div class="map-container">
-                    <img src="resources/image.png" class="map-img">
-                    <div class="pin" data-target="card1" style="top: 40%; left: 60%;">
-                        <img src="resources/pin.png" alt="pin" class="pin-shape">
-                    </div>
-                    <div class="pin" data-target="card3" style="top: 70%; left: 30%;">
-                        <img src="resources/pin.png" alt="pin" class="pin-shape">
-                    </div>
+                <div class="img-container">
+                    <img src="resources/image.png" class="bushwalk-img">
                 </div>
             </div>
         </div>
@@ -226,99 +223,6 @@
 
 
 
-
-
-    /* Script to enable search bar functionality */
-    const inputs = document.querySelectorAll(".review-search-bar");
-    const list = document.querySelector(".review-list");
-    let items = Array.from(list.querySelectorAll("li"));
-    /* Store original order */
-
-    inputs.forEach(input => {
-
-        input.addEventListener("keydown", (e) => {
-            if (e.key === "Enter") {
-
-                const currentItems = Array.from(list.querySelectorAll("li"));
-
-                const keyword = input.value.toLowerCase();
-
-                const sorted = currentItems
-                    .map((item, index) => {
-                        const title = item.querySelector(".review-title").textContent.toLowerCase();
-
-                        function getScore(title) {
-                            if (title === keyword) return 3;
-                            if (title.startsWith(keyword)) return 2;
-                            if (title.includes(keyword)) return 1;
-                            return 0;
-                        }
-
-                        return {
-                            item,
-                            score: getScore(title),
-                            index
-                        };
-                    })
-                    .sort((a, b) => {
-                        if (b.score !== a.score) return b.score - a.score;
-                        return a.index - b.index;
-                    })
-                    .map(obj => obj.item);
-
-                list.innerHTML = "";
-                sorted.forEach(item => list.appendChild(item));
-            }
-        });
-        input.addEventListener("input", () => {
-            if (input.value === "") {
-
-                const currentItems = Array.from(list.querySelectorAll("li"));
-
-                currentItems.sort((a, b) => {
-                    return Number(a.id.replace("card","")) - Number(b.id.replace("card",""));
-                });
-
-                list.innerHTML = "";
-                currentItems.forEach(item => list.appendChild(item));
-            }
-        });
-    });
-
-
-
-
-
-    /* Script to move the corresponding card to the top when a pin is clicked */
-    const pins = document.querySelectorAll(".pin");
-    const reviewList = document.querySelector(".review-list");
-
-    pins.forEach(pin => {
-        pin.addEventListener("click", () => {
-
-            const targetId = pin.dataset.target;
-            const item = document.getElementById(targetId);
-
-            if (!item) return;
-
-            /* Move to the top */
-            reviewList.prepend(item);
-
-            /* Visual effect, slightly enlarge then return to normal */
-            document.querySelectorAll("li").forEach(li => {
-                li.style.order = "";
-            });
-
-            item.style.transform = "scale(1.02)";
-            item.style.transition = "0.3s";
-
-            setTimeout(() => {
-                item.style.transform = "scale(1)";
-            }, 300);
-
-        });
-    });
-    
 
 
 
