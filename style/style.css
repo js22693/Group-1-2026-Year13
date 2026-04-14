@@ -109,22 +109,31 @@
 
 
 
-.review-list {
+.info-list {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.review-list li {
+.info-list li {
     margin-bottom: 15px;
     padding: 10px;
 }
 
-.review-card {
+.info-card {
     width: 75%;
     margin: 0 auto;
 }
 
+.review-card {
+    width: 100%;
+    margin: 0;
+}
+
+.review-list li {
+    margin: 0;
+    padding: 20px;
+}
 
 .map{
     margin-top: 50px;
@@ -187,4 +196,12 @@
     display: block;
     margin: auto;
     margin-top: 30px;
+}
+
+
+.review-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 5px;
 }
