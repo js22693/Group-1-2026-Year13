@@ -22,12 +22,27 @@
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
+.navbar{
+    position: relative;
+    z-index: 10;
+}
 #about_img{
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     padding: 0;
+    display: block;
     width: 100%;
+    border: 2px solid black;
+}
+#about_header{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+
+}
+#FAQ_header{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
 }
 
 .footer-section {
@@ -70,6 +85,18 @@
     height: 300px;
     width: 100%;
 }
+.accordion-button {
+    background-color: #e8f0e9;
+    color: #2c1810;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #1F3D2B; 
+    color: #EDEBE6; 
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #1F3D2B;
+}
 
 @media (max-width: 600px) { 
 #green_path{
@@ -80,6 +107,10 @@
     left: 10%;
     transform: translate(0,0) !important;
 }
+#about_img{
+    height: 300px;
+}
+
 } 
 /* Small devices (portrait tablets and large phones, 600px and up) */ 
 @media (min-width: 600px) { 
@@ -90,6 +121,9 @@
     top: 25%;
     left: 20%;
     transform: translate(0,0) !important;
+}
+#about_img{
+    height: 300px;
 }
 
 } 
@@ -102,6 +136,9 @@
     top: 40%;
     left: 10%;
     transform: translate(0,0) !important;
+}
+#about_img{
+    height: 500px;
 }
 } 
 /* Large devices (laptops/desktops, 992px and up) */ 
@@ -129,11 +166,7 @@
     transform: translate(0,0) !important;
 }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */ 
-@media only screen and (min-width: 1200px) {
 
-
-}
 
 
 
