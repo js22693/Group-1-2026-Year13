@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Review_page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style/bootstrap_style.css">
     <link rel="stylesheet" href="style/style.css">
@@ -36,12 +36,33 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-sm-12">
+
+
             <div class="search-container">
-                <input type="text" placeholder="search bar..." class="review-search-bar">
+
+                <input type="text" placeholder="Search our walks…" class="review-search-bar">
+
                 <button id="addReviewBtn" class="addreview">
-                    <img src="resources/addicon.png" alt="add" class="plusicon">
+                    <img src="resources/addicon.png" class="plusicon">
                 </button>
+
+                <div class="sort-wrapper">
+                    <button id="filterBtn" class="addreview">
+                        <img src="resources/filtericon.png" class="plusicon">
+                    </button>
+
+                    <div id="filterMenu" class="filter-menu" style="display:none;">
+                        <div class="filter-option" data-filter="newest">Newest</div>
+                        <div class="filter-option" data-filter="oldest">Oldest</div>
+                        <div class="filter-option" data-filter="ratingHigh">Rating: High → Low</div>
+                        <div class="filter-option" data-filter="ratingLow">Rating: Low → High</div>
+                    </div>
+                
+                </div>
+
             </div>
+
+
         </div>
         
         
@@ -86,10 +107,9 @@
                             <li id="card1">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">1 review</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">⭐⭐⭐⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2026-04-19 17:46</p>
 
                                     </div>
                                 </div>
@@ -101,10 +121,9 @@
                             <li id="card2">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">2 Place</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">⭐⭐⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2026-04-12 17:46</p>
                                     </div>
                                 </div>
                             </li>
@@ -117,10 +136,9 @@
                             <li id="card3">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">7 Place</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2026-04-12 15:46</p>
                                     </div>
                                 </div>
                             </li>
@@ -133,10 +151,9 @@
                             <li id="card4">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">3 Place</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
                                         <p class="card-text">⭐⭐⭐⭐⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2026-04-15 17:46</p>
                                     </div>
                                 </div>
                             </li>
@@ -148,10 +165,9 @@
                             <li id="card5">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">4 Place</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
                                         <p class="card-text">⭐⭐⭐⭐⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2025-04-15 17:46</p>
                                     </div>
                                 </div>
                             </li>
@@ -165,10 +181,9 @@
                             <li id="card6">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">5 Place</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
                                         <p class="card-text">⭐⭐⭐⭐⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2026-04-15 17:46</p>
                                     </div>
                                 </div>
                             </li>
@@ -179,10 +194,9 @@
                             <li id="card7">
                                 <div class="card review-card">
                                     <div class="card-body">
-                                        <h5 class="card-title review-title">6 Place</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">⭐⭐⭐⭐⭐</p>
+                                        <p class="card-text">⭐⭐</p>
                                         <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-time">2025-03-15 17:46</p>
                                     </div>
                                 </div>
                             </li>
@@ -197,8 +211,20 @@
     </div>
 </div>
 
+
+
+
+
+
+
 <script>
-    /* Script for the expand button in mobile version */
+
+
+
+
+
+
+/* Script for the expand button in mobile version */
     const btn = document.getElementById("toggleBtn");
     const sheet = document.querySelector(".bottom-sheet");
     const icon = document.getElementById("expandIcon");
@@ -222,6 +248,66 @@
 
 
 
+    const filterBtn = document.getElementById("filterBtn");
+    const filterMenu = document.getElementById("filterMenu");
+    const filterOptions = document.querySelectorAll(".filter-option");
+
+    let currentfilter = "newest";
+
+    // 메뉴 열기/닫기
+    filterBtn.addEventListener("click", () => {
+        filterMenu.style.display =
+            filterMenu.style.display === "none" ? "block" : "none";
+    });
+
+    // 옵션 클릭
+    filterOptions.forEach(option => {
+        option.addEventListener("click", () => {
+            currentfilter = option.dataset.filter;
+            filterMenu.style.display = "none";
+            filterReviews();
+        });
+    });
+
+
+    function getRatingValue(text) {
+        return (text.match(/⭐/g) || []).length;
+    }
+
+    function filterReviews() {
+        const list = document.querySelector(".review-list");
+        const items = Array.from(document.querySelectorAll(".review-list li"));
+
+        items.sort((a, b) => {
+            const timeA = new Date(a.querySelector(".card-time")?.innerText || "1970-01-01 00:00");
+            const timeB = new Date(b.querySelector(".card-time")?.innerText || "1970-01-01 00:00");
+
+            const ratingA = getRatingValue(a.querySelectorAll(".card-text")[0]?.innerText || "");
+            const ratingB = getRatingValue(b.querySelectorAll(".card-text")[0]?.innerText || "");
+
+            if (currentfilter === "newest") {
+                return timeB - timeA;
+            }
+
+            if (currentfilter === "oldest") {
+                return timeA - timeB;
+            }
+
+            if (currentfilter === "ratingHigh") {
+                return ratingB - ratingA; // 높은 별점 먼저
+            }
+
+            if (currentfilter === "ratingLow") {
+                return ratingA - ratingB; // 낮은 별점 먼저
+            }
+
+            return 0;
+        });
+
+        items.forEach(item => list.appendChild(item));
+    }
+
+    filterReviews();
 
 
 
@@ -247,6 +333,14 @@
         const title = inputTitle.value.trim();
         const desc = inputDesc.value.trim();
         const rating = inputRating.value;
+        //find time
+        const now = new Date();
+        const timeString =
+            now.getFullYear() + "-" +
+            String(now.getMonth() + 1).padStart(2, "0") + "-" +
+            String(now.getDate()).padStart(2, "0") + " " +
+            String(now.getHours()).padStart(2, "0") + ":" +
+            String(now.getMinutes()).padStart(2, "0");        
 
         if (!title || !desc) return;
 
@@ -255,10 +349,9 @@
         newItem.innerHTML = `
             <div class="card review-card">
                 <div class="card-body">
-                    <h5 class="card-title review-title">${title}</h5>
-                    <h6 class="card-subtitle text-body-secondary">User Added</h6>
                     <p class="card-text">${rating}</p>
                     <p class="card-text">${desc}</p>
+                    <p class="card-time">${timeString}</p>
                 </div>
             </div>
         `;
@@ -282,9 +375,9 @@
 
         allCards.forEach(li => {
             data.push({
-                title: li.querySelector(".review-title").innerText,
                 desc: li.querySelectorAll(".card-text")[1].innerText,
-                rating: li.querySelectorAll(".card-text")[0].innerText
+                rating: li.querySelectorAll(".card-text")[0].innerText,
+                time: li.querySelector(".card-time")?.innerText || ""
             });
         });
 
@@ -306,10 +399,10 @@
             li.innerHTML = `
                 <div class="card review-card">
                     <div class="card-body">
-                        <h5 class="card-title review-title">${item.title}</h5>
-                        <h6 class="card-subtitle text-body-secondary">Saved Review</h6>
                         <p class="card-text">${item.rating}</p>
                         <p class="card-text">${item.desc}</p>
+                        <p class="card-time">${item.time || ""}</p>
+
                     </div>
                 </div>
             `;
@@ -319,9 +412,17 @@
     }
 
     // 실행
+    
     loadReviews();
 
 </script>
+
+
+
+
+
+
+
 
 
 <footer class="footer-section">
