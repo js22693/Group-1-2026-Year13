@@ -79,7 +79,11 @@
     text-underline-offset: 5px;
     text-decoration-thickness: 2px;
 }
-
+#our_walks{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+}
 #card_img{
     object-fit: cover;
     height: 300px;
