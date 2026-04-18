@@ -55,6 +55,9 @@
     background: rgba(232, 248, 237, 0.95) !important;
     border: 1.5px solid !important;
     }
+    .review-search-bar{
+        height: 35px;
+    }
     .expand-button{
     display: flex;
     justify-content: flex-end;
@@ -81,6 +84,13 @@
         width: 35px !important;
         height: 35px !important;
     }
+    .review-card {
+        min-height: 270px !important;
+    }
+    .review-popup {
+        top:35% !important;
+    }
+
 }
 
 
