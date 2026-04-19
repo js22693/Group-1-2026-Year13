@@ -48,9 +48,12 @@
 @media screen and (max-width: 992px){
     .map-img{
     margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
     width: 60% !important;
     height: 60% !important;
     }
+
     .search-bar-mobile{
     background: rgba(232, 248, 237, 0.95) !important;
     border: 1.5px solid !important;
@@ -58,6 +61,8 @@
     .review-search-bar{
         height: 35px;
     }
+
+    
     .expand-button{
     display: flex;
     justify-content: flex-end;
@@ -107,6 +112,7 @@
         display: none !important;
     }
 
+
     .search-container-mobile {
         display: flex;
     }
@@ -140,7 +146,7 @@
     }
 
 
-        .pin1{
+    .pin1{
         top: 31.5% !important;
         left: 48.2% !important;
     }
