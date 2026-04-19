@@ -146,7 +146,7 @@
 .card-body {
     height: auto;   
     display: flex;
-    flex-direction: column;         /* 자동 확장 */
+    flex-direction: column;       
 }
 
 
@@ -340,8 +340,8 @@
 
 textarea {
     resize: none;
-    overflow-y: auto;   /* 🔥 스크롤 허용 */
-    max-height: 200px;  /* 🔥 여기서 제한 */
+    overflow-y: auto;   
+    max-height: 200px;  
 }
 
 .review-text {
@@ -349,8 +349,8 @@ textarea {
     -webkit-box-orient: vertical;
     overflow: hidden;
 
-    line-clamp: 4;          /* 미래 표준 */
-    -webkit-line-clamp: 4;  /* 현재 대부분 브라우저 */
+    line-clamp: 4;          
+    -webkit-line-clamp: 4;  
     position: relative;
     overflow: hidden;
     line-height: 1.4em;
@@ -377,7 +377,7 @@ textarea {
 .img-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start; 
     gap: 10px;
 }
 

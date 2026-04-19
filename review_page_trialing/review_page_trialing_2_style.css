@@ -147,7 +147,7 @@
 .card-body {
     height: auto;   
     display: flex;
-    flex-direction: column;         /* 자동 확장 */
+    flex-direction: column;       
 }
 
 
@@ -331,8 +331,8 @@
 
 textarea {
     resize: none;
-    overflow-y: auto;   /* 🔥 스크롤 허용 */
-    max-height: 200px;  /* 🔥 여기서 제한 */
+    overflow-y: auto;  
+    max-height: 200px;  
 }
 
 .review-text {
@@ -340,8 +340,8 @@ textarea {
     -webkit-box-orient: vertical;
     overflow: hidden;
 
-    line-clamp: 4;          /* 미래 표준 */
-    -webkit-line-clamp: 4;  /* 현재 대부분 브라우저 */
+    line-clamp: 4;         
+    -webkit-line-clamp: 4;  
     position: relative;
     overflow: hidden;
     line-height: 1.4em;
@@ -368,7 +368,7 @@ textarea {
 .img-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start; 
     gap: 10px;
 }
 
@@ -405,7 +405,7 @@ textarea {
     font-size: 18px;
     font-weight: 600;
     text-decoration: underline;
-    text-underline-offset: 6px;   /* 줄과 글자 사이 간격 */
+    text-underline-offset: 6px;   
     text-decoration-thickness: 2px;
 }
 
@@ -419,10 +419,10 @@ textarea {
 .suggestions-box {
     position: absolute;
 
-    top: 100%;   /* 🔥 input 바로 아래 */
+    top: 100%;  
     left: 0;
 
-    width: 100%; /* input이랑 동일 너비 */
+    width: 100%; 
 
     border-radius: 8px;
 
