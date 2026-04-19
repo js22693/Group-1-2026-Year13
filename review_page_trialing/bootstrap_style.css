@@ -47,13 +47,10 @@
 /*mobile device*/
 @media screen and (max-width: 992px){
     .map-img{
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 60% !important;
-    height: 60% !important;
+     margin: auto;
+     width: 450px;
+     height:400px;
     }
-
     .search-bar-mobile{
     background: rgba(232, 248, 237, 0.95) !important;
     border: 1.5px solid !important;
@@ -61,8 +58,6 @@
     .review-search-bar{
         height: 35px;
     }
-
-    
     .expand-button{
     display: flex;
     justify-content: flex-end;
@@ -96,81 +91,7 @@
         top:35% !important;
     }
 
-    .bushwalk-img {
-        width: 100%;
-        max-width: 500px;
-        height: 100%;
-
-    }
-
-    .track-container{
-        margin-bottom: 30px !important;
-    }
-
-
-    .search-container-pc {
-        display: none !important;
-    }
-
-
-    .search-container-mobile {
-        display: flex;
-    }
-    
-
-    .expand-button{
-    display: flex;
-    justify-content: flex-end;
-
-    padding: 15px 15px 0px 0px;
-
-    margin-right: 15px;
-    background: rgba(232, 248, 237, 0.95);
-    }
-
-    .expand{
-        width: 45px;
-        height: 45px;
-        background: rgba(232, 248, 237, 0.95);
-
-    }
-
-    #toggleBtn{
-        border: none;
-        background: rgba(232, 248, 237, 0.95);
-
-    }
-    .plusicon{
-        width: 35px !important;
-        height: 35px !important;
-    }
-
-
-    .pin1{
-        top: 31.5% !important;
-        left: 48.2% !important;
-    }
-
-    .pin2{
-        top: 36% !important;
-        left: 45.8% !important;
-    }
-
-    .pin3{
-        top: 54.5% !important;
-        left: 61.5% !important;
-    }
-
-    .pin4{
-        top: 31.9% !important;
-        left: 42.4% !important;
-    }
 }
-
-
-
-
-
 
 
 
@@ -188,13 +109,13 @@
     #toggleBtn {
         display: none;
     }
-    .search-container-mobile  {
+    .search-bar-pc {
         display: block !important;
         margin-top: 100px !important;
         margin-bottom: 30px !important;
     }
 
-    .search-container-mobile {
+    .search-bar-mobile {
         display: none !important;
     }
     .map-img{
@@ -221,25 +142,5 @@
      margin: auto;
      width: 950px;
      height:950px;
-    }
-
-    .pin1{
-        top: 31.4% !important;
-        left: 47.7% !important;
-    }
-
-    .pin2{
-        top: 36% !important;
-        left: 44.4% !important;
-    }
-
-    .pin3{
-        top: 54.5% !important;
-        left: 65% !important;
-    }
-
-    .pin4{
-        top: 31.9% !important;
-        left: 39.8% !important;
     }
 }

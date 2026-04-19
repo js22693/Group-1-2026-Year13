@@ -23,7 +23,7 @@
           <a class="nav-link bg-font fs-3 px-lg-5" href="about.html">About</a>
             <a class="navbar-brand bg-font fs-1 px-lg-5" href="#" id="green_path">GreenPath</a>
           <a class="nav-link bg-font fs-3 px-lg-5" href="map.html" id="active">Map</a>
-          <a class="nav-link bg-font fs-3 px-lg-5" href="#">Review</a>
+          <a class="nav-link bg-font fs-3 px-lg-5" href="Review.html">Review</a>
         </div>
       </div>
     </div>
@@ -69,18 +69,18 @@
 
 
         <div class="col-lg-6 col-12 order-2 order-lg-1">
-            <div class="left-panel">
+            <div class="left-panel-map">
                 <div class="search-container-pc">
                     <!--PC search bar and filter-->
 
                     <input type="text" placeholder="search bar" class="search-bar">
 
-                    <div class="filter-wrapper">
-                        <button id="filterBtnPC" class="filter">
-                            <img src="resources/filtericon.png" class="plusicon">
+                    <div class="sort-wrapper">
+                        <button id="filterBtnPC" class="filtermap">
+                            <img src="resources/filtericon.png" class="plusiconmap">
                         </button>
 
-                        <div id="filterMenuPC" class="filter-menu" style="display:none;">
+                        <div id="filterMenuPC" class="filter-menu-map" style="display:none;">
                             <div class="filter-option" data-filter="length-asc">short -> long</div>
                             <div class="filter-option" data-filter="length-desc">long -> short</div>
                             <div class="filter-option" data-filter="time-asc">Time ↑</div>
@@ -93,7 +93,7 @@
 
                 
                 <div class="bottom-sheet">
-                    <div class="content">
+                    <div class="mapcontent">
                         <div class="expand-button">
                             <button id="toggleBtn"><img src="resources/expand.png" id="expandIcon" alt="expand" class="expand"></button>
                         </div>
@@ -101,12 +101,12 @@
                         <div class="search-container-mobile">
                             <input type="text" placeholder="search bar..." class="search-bar search-bar-mobile">
 
-                            <div class="filter-wrapper">
-                                <button id="filterBtnMobile" class="filter">
-                                    <img src="resources/filtericon.png" class="plusicon">
+                            <div class="sort-wrapper">
+                                <button id="filterBtnMobile" class="filtermap">
+                                    <img src="resources/filtericon.png" class="plusiconmap">
                                 </button>
 
-                                <div id="filterMenuMobile" class="filter-menu" style="display:none;">
+                                <div id="filterMenuMobile" class="filter-menu-map" style="display:none;">
                                     <div class="filter-option" data-filter="length-asc">short -> long</div>
                                     <div class="filter-option" data-filter="length-desc">long -> short</div>
                                     <div class="filter-option" data-filter="time-asc">Time ↑</div>
@@ -125,8 +125,7 @@
                                 <div class="card info-card">
                                     <div class="card-body">
                                         <h5 class="card-title info-title">Smiths Bush</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-text">A peaceful native bush walk perfect for a short escape, surrounded by lush greenery and birdlife.</p>
 
                                         <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more1">
                                             More Info
@@ -160,8 +159,7 @@
                                 <div class="card info-card">
                                     <div class="card-body">
                                         <h5 class="card-title info-title">Kauri Glen Walkway</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-text">Explore towering kauri trees and scenic forest paths in this refreshing and moderately challenging walk.</p>
 
                                         <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more2">
                                             More Info
@@ -193,8 +191,7 @@
                                 <div class="card info-card">
                                     <div class="card-body">
                                         <h5 class="card-title info-title">St Johns Bushwalk</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-text">A quiet and easy trail ideal for a relaxing stroll, offering a calm escape close to the city.</p>
 
                                         <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more3">
                                             More Info
@@ -225,8 +222,7 @@
                                 <div class="card info-card">
                                     <div class="card-body">
                                         <h5 class="card-title info-title">Eskdale Reserve</h5>
-                                        <h6 class="card-subtitle text-body-secondary">Auckland Domain</h6>
-                                        <p class="card-text">Beautiful walking track with great views and nature.</p>
+                                        <p class="card-text">A more adventurous track with varied terrain, perfect for those seeking a challenging outdoor experience.</p>
 
                                         <button class="btn btn-success" data-bs-toggle="collapse" data-bs-target="#more4">
                                             More Info
@@ -270,7 +266,7 @@
     btn.addEventListener("click", () => {
         if (window.innerWidth >= 992) return;
         if (expanded) {
-            sheet.style.height = "250px";
+            sheet.style.height = "650px";
             icon.src = "resources/expand.png";
 
         } else {
