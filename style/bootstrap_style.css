@@ -91,6 +91,17 @@
         top:35% !important;
     }
 
+    .bushwalk-img {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+
+    }
+
+    .track-container{
+        margin-bottom: 30px !important;
+    }
+
 }
 
 

@@ -44,9 +44,10 @@
 
             <!--Top section include search bar, -->
             <div class="search-container">
-
-                <input type="text" placeholder="Search our walks…" class="review-search-bar">
-                <div id="suggestions" class="suggestions-box"></div>
+                <div class="search-wrapper">
+                    <input type="text" placeholder="Search our walks…" class="review-search-bar">
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
 
                 <button id="addReviewBtn" class="addreview">
                     <img src="resources/plus.png" class="plusicon">
@@ -95,7 +96,7 @@
             <div class="right-panel">
                 <div class="track-container">
                     <div class="track-title">Smiths Bushs</div>
-                    <img src="resources/image.png" class="bushwalk-img">
+                    <img src="resources/bushwalk1.jpg" class="bushwalk-img">
 
 
                 </div>
@@ -389,16 +390,16 @@ function loadReviews() {
         const value = searchInput.value.toLowerCase().trim();
 
         if (value.includes("smiths bushs")) {
-            selectTrack("track1", "resources/logo.jpg");
+            selectTrack("track1", "resources/bushwalk1.jpg");
         } 
         else if (value.includes("kauri glen walkway")) {
-            selectTrack("track2", "resources/addicon.png");
+            selectTrack("track2", "resources/bushwalk2.jpg");
         } 
         else if (value.includes("st johns bushwalk")) {
-            selectTrack("track3", "resources/img3.jpg");
+            selectTrack("track3", "resources/bushwalk3.jpg");
         } 
         else if (value.includes("eskdale reserve")) {
-            selectTrack("track4", "resources/img4.jpg");
+            selectTrack("track4", "resources/bushwalk4.jpg");
         } 
         else {
             alert("Track not found");
@@ -504,10 +505,10 @@ function loadReviews() {
     
     //track name and ID list
     const tracks = [
-        { id: "track1", name: "Smiths Bushs", img: "resources/logo.jpg" },
-        { id: "track2", name: "Kauri Glen Walkway", img: "resources/addicon.png" },
-        { id: "track3", name: "St Johns Bushwalk", img: "resources/img3.jpg" },
-        { id: "track4", name: "Eskdale Reserve", img: "resources/img4.jpg" }
+        { id: "track1", name: "Smiths Bushs", img: "resources/bushwalk1.jpg" },
+        { id: "track2", name: "Kauri Glen Walkway", img: "resources/bushwalk2.jpg" },
+        { id: "track3", name: "St Johns Bushwalk", img: "resources/bushwalk3.jpg" },
+        { id: "track4", name: "Eskdale Reserve", img: "resources/bushwalk4.jpg" }
     ];
 
 
