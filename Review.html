@@ -19,11 +19,11 @@
       <a class="navbar-brand bg-font fs-2 px-lg-4" href="#" id="green_path_brand">GreenPath</a>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active bg-font fs-3 px-lg-5" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active bg-font fs-3 px-lg-5" aria-current="page" href="index.html" id="active">Home</a>
           <a class="nav-link bg-font fs-3 px-lg-5" href="about.html">About</a>
             <a class="navbar-brand bg-font fs-1 px-lg-5" href="#" id="green_path">GreenPath</a>
           <a class="nav-link bg-font fs-3 px-lg-5" href="map.html">Map</a>
-          <a class="nav-link bg-font fs-3 px-lg-5" href="Review.html" id="active">Review</a>
+          <a class="nav-link bg-font fs-3 px-lg-5" href="Review.html">Review</a>
         </div>
       </div>
     </div>
@@ -145,6 +145,13 @@
     const btn = document.getElementById("toggleBtn");
     const sheet = document.querySelector(".bottom-sheet");
     const icon = document.getElementById("expandIcon");
+
+    const defaultReviews = {
+        track1: [{ desc: "A peaceful and relaxing walk surrounded by beautiful native trees.", rating: "⭐⭐⭐⭐⭐", time: "2026-04-10 10:30" }],
+        track2: [{ desc: "Loved the tall kauri trees. A bit challenging but worth it!", rating: "⭐⭐⭐⭐", time: "2026-04-12 14:15" }],
+        track3: [{ desc: "Nice short walk, perfect for a quick break.", rating: "⭐⭐⭐⭐⭐", time: "2026-04-15 09:00" }],
+        track4: [{ desc: "Great track if you want something more challenging.", rating: "⭐⭐⭐⭐", time: "2026-04-18 16:45" }]
+    };
 
 
     let expanded = false;
@@ -288,6 +295,8 @@
 
     let currentTrack = "track1";
 
+
+
     function saveReviews() {
         const allCards = document.querySelectorAll(".review-list li");
 
@@ -308,56 +317,44 @@
 
 
 function loadReviews() {
-    let saved = JSON.parse(localStorage.getItem("reviews"));
+        let saved = JSON.parse(localStorage.getItem("reviews"));
 
-    if (!saved) {
-        saved = {
-            track1: [],
-            track2: [],
-            track3: [],
-            track4: []
-        };
-        localStorage.setItem("reviews", JSON.stringify(saved));
-    }
+        // 데이터가 없거나, 현재 트랙에 리뷰가 하나도 없으면 기본값 적용
+        if (!saved || !saved[currentTrack] || saved[currentTrack].length === 0) {
+            // 기존 데이터가 아예 없으면 전체를 default로, 아니면 현재 트랙만 default 추가
+            if(!saved) saved = defaultReviews;
+            else saved[currentTrack] = defaultReviews[currentTrack];
+            
+            localStorage.setItem("reviews", JSON.stringify(saved));
+        }
 
-    const data = saved[currentTrack] || [];
+        const data = saved[currentTrack] || [];
+        reviewList_form.innerHTML = "";
 
-    reviewList_form.innerHTML = "";
-
-    data.forEach(item => {
-        const li = document.createElement("li");
-
-        li.innerHTML = `
-            <div class="card review-card">
-                <div class="card-body">
-
-                    <p class="card-text">${item.rating}</p>
-
-                    <p class="card-text review-text">${item.desc}</p>
-
-                    <button class="more-btn" style="display:none;">∨</button>
-
-                    <p class="card-time">${item.time || ""}</p>
-
+        data.forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <div class="card review-card">
+                    <div class="card-body">
+                        <p class="card-text">${item.rating}</p>
+                        <p class="card-text review-text">${item.desc}</p>
+                        <button class="more-btn" style="display:none;">∨</button>
+                        <p class="card-time">${item.time || ""}</p>
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+            reviewList_form.appendChild(li);
 
-        reviewList_form.appendChild(li);
-
-
-
-        const text = li.querySelector(".review-text");
-        const btn = li.querySelector(".more-btn");
-
-        requestAnimationFrame(() => {
-            if (text.scrollHeight > text.clientHeight) {
-                btn.style.display = "block";
-            }
+            const text = li.querySelector(".review-text");
+            const mBtn = li.querySelector(".more-btn");
+            requestAnimationFrame(() => {
+                if (text.scrollHeight > text.clientHeight) {
+                    mBtn.style.display = "block";
+                }
+            });
         });
-    });
-}
-
+        filterReviews(); // 로드 후 정렬 적용
+    }
     
     loadReviews();
     filterReviews();
