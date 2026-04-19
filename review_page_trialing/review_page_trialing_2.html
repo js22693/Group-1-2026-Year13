@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review_page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap_style.css">
+    <link rel="stylesheet" href="review_page_trialing_2_style.css">
+</head>
+<body class="bg-page_container">
+  <div class="">
+    <nav class="navbar navbar-expand-lg bg-nav navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand bg-font fs-2 px-lg-4" href="#" id="green_path_brand">GreenPath</a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active bg-font fs-3 px-lg-5" aria-current="page" href="#" id="active">Home</a>
+          <a class="nav-link bg-font fs-3 px-lg-5" href="#">About</a>
+            <a class="navbar-brand bg-font fs-1 px-lg-5" href="#" id="green_path">GreenPath</a>
+          <a class="nav-link bg-font fs-3 px-lg-5" href="#">Map</a>
+          <a class="nav-link bg-font fs-3 px-lg-5" href="#">Review</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </div>
+  <div id="page_containet" class="">
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+
+
+            <!--Top section include search bar, -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" placeholder="Search our walks…" class="review-search-bar">
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+
+                <button id="addReviewBtn" class="addreview">
+                    <img src="resources/plus.png" class="plusicon">
+                </button>
+
+                <div class="sort-wrapper">
+                    <button id="filterBtn" class="addreview">
+                        <img src="resources/filtericon.png" class="plusicon">
+                    </button>
+
+                    <div id="filterMenu" class="filter-menu" style="display:none;">
+                        <div class="filter-option" data-filter="newest">Newest</div>
+                        <div class="filter-option" data-filter="oldest">Oldest</div>
+                        <div class="filter-option" data-filter="ratingHigh">Rating: High → Low</div>
+                        <div class="filter-option" data-filter="ratingLow">Rating: Low → High</div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+
+        </div>
+        
+        <!--add review popup-->
+        <div id="reviewForm" class="review-popup" style="display:none;">
+            
+            <h4 class="mb-3">Write Review</h4>
+
+            <textarea id="inputDesc" placeholder="Write your review..." class="form-control mb-3"></textarea>
+            
+            <select id="inputRating" class="form-control mb-3">
+                <option value="⭐">⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐⭐" selected>⭐⭐⭐⭐⭐</option>
+            </select>
+
+            <button id="submitReview" class="btn btn-success w-100">Submit Review</button>
+
+        </div>
+
+        <!--Right panel include image and name-->
+        <div class="col-lg-6 col-12 map order-1 order-lg-2">
+            <div class="right-panel">
+                <div class="track-container">
+                    <div class="track-title">Smiths Bushs</div>
+                    <img src="resources/image.png" class="bushwalk-img">
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--left panel include reviews-->
+        <div class="col-lg-6 col-12 order-2 order-lg-1">
+            <div class="left-panel">
+            
+                <div class="bottom-sheet">
+                    <div class="content">
+                        <div class="expand-button">
+                            <button id="toggleBtn"><img src="resources/expand.png" id="expandIcon" alt="expand" class="expand"></button>
+                        </div>
+
+                        <ul class="list-unstyled review-list">
+
+                        
+                        </ul>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+/* Script for the expand button in mobile version */
+    const btn = document.getElementById("toggleBtn");
+    const sheet = document.querySelector(".bottom-sheet");
+    const icon = document.getElementById("expandIcon");
+
+
+    let expanded = false;
+
+    btn.addEventListener("click", () => {
+        if (window.innerWidth >= 992) return;
+        if (expanded) {
+            sheet.style.height = "650px";
+            icon.src = "resources/expand.png";
+
+        } else {
+            sheet.style.height = "1300px";
+            icon.src = "resources/unexpand.png";
+
+        }
+        expanded = !expanded;
+    });
+
+
+
+    const filterBtn = document.getElementById("filterBtn");
+    const filterMenu = document.getElementById("filterMenu");
+    const filterOptions = document.querySelectorAll(".filter-option");
+
+    let currentfilter = "newest";
+
+    // menu open and close
+    filterBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        isFilterOpen = !isFilterOpen;
+        filterMenu.style.display = isFilterOpen ? "block" : "none";
+    });
+
+    // filter option click
+    filterOptions.forEach(option => {
+        option.addEventListener("click", () => {
+            currentfilter = option.dataset.filter;
+            filterMenu.style.display = "none";
+            filterReviews();
+        });
+    });
+
+
+    //calculated how many stars
+    function getRatingValue(text) {
+        return (text.match(/⭐/g) || []).length;
+    }
+
+
+    //filtering function 
+    function filterReviews() {
+        const list = document.querySelector(".review-list");
+        const items = Array.from(document.querySelectorAll(".review-list li"));
+
+        items.sort((a, b) => {
+            const timeA = new Date(a.querySelector(".card-time")?.innerText || "1970-01-01 00:00");
+            const timeB = new Date(b.querySelector(".card-time")?.innerText || "1970-01-01 00:00");
+
+            const ratingA = getRatingValue(a.querySelectorAll(".card-text")[0]?.innerText || "");
+            const ratingB = getRatingValue(b.querySelectorAll(".card-text")[0]?.innerText || "");
+
+            if (currentfilter === "newest") {
+                return timeB - timeA;
+            }
+
+            if (currentfilter === "oldest") {
+                return timeA - timeB;
+            }
+
+
+            if (currentfilter === "ratingHigh") {
+                return ratingB - ratingA; // High star rating first
+            }
+
+            if (currentfilter === "ratingLow") {
+                return ratingA - ratingB; // low star rating first
+            }
+
+            return 0;
+        });
+
+        items.forEach(item => list.appendChild(item));
+    }
+
+    filterReviews();
+
+
+
+
+    const addBtn_form = document.getElementById("addReviewBtn");
+    const formBox = document.getElementById("reviewForm");
+    const submitBtn = document.getElementById("submitReview");
+    const inputDesc = document.getElementById("inputDesc");
+    const inputRating = document.getElementById("inputRating");
+
+    const reviewList_form = document.querySelector(".review-list");
+
+
+    addBtn_form.addEventListener("click", () => {
+        formBox.style.display = formBox.style.display === "none" ? "block" : "none";
+    });
+
+
+    submitBtn.addEventListener("click", () => {
+
+        const desc = inputDesc.value.trim();
+        const rating = inputRating.value;
+
+        if (!desc) return;
+
+        const now = new Date();
+        const timeString =
+            now.getFullYear() + "-" +
+            String(now.getMonth() + 1).padStart(2, "0") + "-" +
+            String(now.getDate()).padStart(2, "0") + " " +
+            String(now.getHours()).padStart(2, "0") + ":" +
+            String(now.getMinutes()).padStart(2, "0");
+
+        const saved = JSON.parse(localStorage.getItem("reviews")) || {};
+
+        if (!saved[currentTrack]) {
+            saved[currentTrack] = [];
+        }
+
+        saved[currentTrack].unshift({
+            desc,
+            rating,
+            time: timeString
+        });
+
+        localStorage.setItem("reviews", JSON.stringify(saved));
+
+        loadReviews();
+
+        formBox.style.display = "none";
+        isFormOpen = false;
+
+        inputDesc.value = "";
+        inputRating.value = "⭐⭐⭐⭐⭐";
+    });
+
+    let currentTrack = "track1";
+
+    function saveReviews() {
+        const allCards = document.querySelectorAll(".review-list li");
+
+        const data = [];
+
+        allCards.forEach(li => {
+            data.push({
+                desc: li.querySelectorAll(".card-text")[1].innerText,
+                rating: li.querySelectorAll(".card-text")[0].innerText,
+                time: li.querySelector(".card-time")?.innerText || ""
+            });
+        });
+
+    const saved = JSON.parse(localStorage.getItem("reviews")) || {};    }
+
+
+
+
+
+function loadReviews() {
+    let saved = JSON.parse(localStorage.getItem("reviews"));
+
+    if (!saved) {
+        saved = {
+            track1: [],
+            track2: [],
+            track3: [],
+            track4: []
+        };
+        localStorage.setItem("reviews", JSON.stringify(saved));
+    }
+
+    const data = saved[currentTrack] || [];
+
+    reviewList_form.innerHTML = "";
+
+    data.forEach(item => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <div class="card review-card">
+                <div class="card-body">
+
+                    <p class="card-text">${item.rating}</p>
+
+                    <p class="card-text review-text">${item.desc}</p>
+
+                    <button class="more-btn" style="display:none;">∨</button>
+
+                    <p class="card-time">${item.time || ""}</p>
+
+                </div>
+            </div>
+        `;
+
+        reviewList_form.appendChild(li);
+
+
+
+        const text = li.querySelector(".review-text");
+        const btn = li.querySelector(".more-btn");
+
+        requestAnimationFrame(() => {
+            if (text.scrollHeight > text.clientHeight) {
+                btn.style.display = "block";
+            }
+        });
+    });
+}
+
+    
+    loadReviews();
+    filterReviews();
+
+
+    function selectTrack(trackId, img) {
+        currentTrack = trackId;
+
+        const track = tracks.find(t => t.id === trackId);
+
+        document.querySelector(".bushwalk-img").src = img;
+        document.querySelector(".track-title").innerText = track.name;
+
+        loadReviews();
+    }
+
+
+    const searchInput = document.querySelector(".review-search-bar");
+
+
+    searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            handleSearch();
+        }
+    });
+
+
+    //search bush walk track
+    function handleSearch() {
+        const value = searchInput.value.toLowerCase().trim();
+
+        if (value.includes("smiths bushs")) {
+            selectTrack("track1", "resources/logo.jpg");
+        } 
+        else if (value.includes("kauri glen walkway")) {
+            selectTrack("track2", "resources/addicon.png");
+        } 
+        else if (value.includes("st johns bushwalk")) {
+            selectTrack("track3", "resources/img3.jpg");
+        } 
+        else if (value.includes("eskdale reserve")) {
+            selectTrack("track4", "resources/img4.jpg");
+        } 
+        else {
+            alert("Track not found");
+        }
+    }
+
+
+    const textarea = document.getElementById("inputDesc");
+
+    textarea.addEventListener("input", () => {
+        textarea.style.height = "auto";
+
+        // expend max-height
+        const maxHeight = 200;
+
+        if (textarea.scrollHeight < maxHeight) {
+            textarea.style.overflowY = "hidden";
+            textarea.style.height = textarea.scrollHeight + "px";
+        } else {
+            textarea.style.height = maxHeight + "px";
+            textarea.style.overflowY = "auto";
+        }
+    });
+
+    addBtn_form.addEventListener("click", (e) => {
+        e.stopPropagation();
+        isFormOpen = !isFormOpen;
+        formBox.style.display = isFormOpen ? "block" : "none";
+    });
+
+
+
+    requestAnimationFrame(() => {
+        if (text.scrollHeight > text.clientHeight) {
+            reviewbtn.style.display = "block";
+        }
+    });
+
+
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.classList.contains("more-btn")) return;
+
+        const text = e.target.previousElementSibling;
+
+        const isExpanded = text.classList.contains("expanded");
+
+        if (!isExpanded) {
+            // open
+            text.classList.add("expanded");
+            text.style.webkitLineClamp = "unset";
+            text.innerText = text.innerText; // stay
+            e.target.innerText = "^";
+        } else {
+            // back to 2 sentence
+            text.classList.remove("expanded");
+            text.style.webkitLineClamp = "4";
+            e.target.innerText = "∨";
+        }
+    });
+
+
+    document.addEventListener("click", () => {
+
+        // add review 닫기
+        if (isFormOpen) {
+            formBox.style.display = "none";
+            isFormOpen = false;
+        }
+
+        // filter 닫기
+        if (isFilterOpen) {
+            filterMenu.style.display = "none";
+            isFilterOpen = false;
+        }
+    });
+
+    let isFormOpen = false;
+    let isFilterOpen = false;
+    formBox.addEventListener("click", (e) => e.stopPropagation());
+    filterMenu.addEventListener("click", (e) => e.stopPropagation());
+
+
+    const suggestionBox = document.getElementById("suggestions");
+
+    searchInput.addEventListener("input", () => {
+        const value = searchInput.value.toLowerCase().trim();
+
+        if (!value) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        const filtered = tracks.filter(track =>
+            track.name.toLowerCase().startsWith(value)
+        );
+
+        renderSuggestions(filtered);
+    });
+
+
+
+    
+    //track name and ID list
+    const tracks = [
+        { id: "track1", name: "Smiths Bushs", img: "resources/logo.jpg" },
+        { id: "track2", name: "Kauri Glen Walkway", img: "resources/addicon.png" },
+        { id: "track3", name: "St Johns Bushwalk", img: "resources/img3.jpg" },
+        { id: "track4", name: "Eskdale Reserve", img: "resources/img4.jpg" }
+    ];
+
+
+
+
+
+    function renderSuggestions(list) {
+        suggestionBox.innerHTML = "";
+
+        if (list.length === 0) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        list.forEach(track => {
+            const div = document.createElement("div");
+            div.className = "suggestion-item";
+            div.innerText = track.name;
+
+            div.addEventListener("click", () => {
+                selectTrack(track.id, track.img);
+                searchInput.value = track.name;
+                suggestionBox.style.display = "none";
+            });
+
+            suggestionBox.appendChild(div);
+        });
+
+        suggestionBox.style.display = "block";
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<footer class="footer-section">
+    <div class="container">
+
+        <div class="row footer-top">
+            <div class="col-lg-12">
+                <h4>GreenPath</h4>
+                <p>Walking Track Website</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 footer-box">
+                <h6>About us</h6>
+                <p>Discover the best walking tracks<br>around New Zealand.</p>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 footer-box">
+                <h6>Open hours</h6>
+                <p>Monday to Friday <br>time to time</p>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 footer-box">
+                <h6>Address</h6>
+                <p>Auckland <br>New Zealand</p>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 footer-box">
+                <h6>Follow us</h6>
+                <p>Instagram<br>YouTube</p>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col text-center">
+                <p>2026 GreenPath</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
