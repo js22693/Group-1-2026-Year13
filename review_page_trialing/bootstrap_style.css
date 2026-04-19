@@ -1,0 +1,146 @@
+
+
+@media (max-width: 600px) { 
+#green_path{
+    display: none;
+}
+} 
+/* Small devices (portrait tablets and large phones, 600px and up) */ 
+@media (min-width: 600px) { 
+#green_path{
+    display: none;
+}
+
+} 
+/* Medium devices (landscape tablets, 768px and up) */ 
+@media (min-width: 768px) { 
+#green_path{
+    display: none;
+}
+} 
+/* Large devices (laptops/desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) {
+#active{
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-thickness: 6px;
+}
+#green_path{
+    display: inline;
+}
+#green_path_brand{
+    display: none;
+}
+ 
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */ 
+@media only screen and (min-width: 1200px) {
+
+
+}
+
+
+
+
+
+
+/*mobile device*/
+@media screen and (max-width: 992px){
+    .map-img{
+     margin: auto;
+     width: 450px;
+     height:400px;
+    }
+    .search-bar-mobile{
+    background: rgba(232, 248, 237, 0.95) !important;
+    border: 1.5px solid !important;
+    }
+    .review-search-bar{
+        height: 35px;
+    }
+    .expand-button{
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 15px 15px 0px 0px;
+
+    margin-right: 15px;
+    background: rgba(232, 248, 237, 0.95);
+    }
+
+    .expand{
+        width: 45px;
+        height: 45px;
+        background: rgba(232, 248, 237, 0.95);
+
+    }
+
+    #toggleBtn{
+        border: none;
+        background: rgba(232, 248, 237, 0.95);
+
+    }
+    .plusicon{
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .review-card {
+        min-height: 270px !important;
+    }
+    .review-popup {
+        top:35% !important;
+    }
+
+}
+
+
+
+/*large device (over 992px)*/
+@media screen and (min-width: 992px) {
+    .bottom-sheet {
+        height: 700px !important;
+        background-color: rgba(255, 255, 255, 0)!important;
+
+    }
+    .left-panal{
+        margin-top: 300px;
+    }
+
+    #toggleBtn {
+        display: none;
+    }
+    .search-bar-pc {
+        display: block !important;
+        margin-top: 100px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .search-bar-mobile {
+        display: none !important;
+    }
+    .map-img{
+        width: 650px;
+        height: 650px;
+        margin-top: 100px !important;
+    }
+
+}
+
+
+/*extra large device (over 2000px)*/
+
+@media screen and (min-width: 2000px) {
+    .bottom-sheet {
+        height: 1100px !important;
+    }
+
+    .search-bar-pc {
+        margin-top: 100px !important;
+    }
+
+    .map-img{
+     margin: auto;
+     width: 950px;
+     height:950px;
+    }
+}
