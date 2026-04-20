@@ -87,7 +87,7 @@
                 <option value="⭐⭐⭐⭐⭐" selected>⭐⭐⭐⭐⭐</option>
             </select>
 
-            <button id="submitReview" class="btn btn-success w-100">Submit Review</button>
+            <button id="submitReview" class="btn btn-success-review w-100">Submit Review</button>
 
         </div>
 
@@ -319,9 +319,7 @@
 function loadReviews() {
         let saved = JSON.parse(localStorage.getItem("reviews"));
 
-        // 데이터가 없거나, 현재 트랙에 리뷰가 하나도 없으면 기본값 적용
         if (!saved || !saved[currentTrack] || saved[currentTrack].length === 0) {
-            // 기존 데이터가 아예 없으면 전체를 default로, 아니면 현재 트랙만 default 추가
             if(!saved) saved = defaultReviews;
             else saved[currentTrack] = defaultReviews[currentTrack];
             

@@ -373,10 +373,23 @@
     width: 100px !important;
 }
 
+.btn-success-review{
+    background-color: #1F3D2B;
+    border-color: #34473c;
+    color: white;
+}
+
 .btn-success:hover {
     background-color: #275238;
     border-color: #163021;
 }
+
+.btn-success-review:hover {
+    background-color: #275238;
+    border-color: #163021;
+}
+
+
 
 
 .card{
